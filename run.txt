@@ -1,0 +1,1 @@
+go run Go-Pinjam.go Tambah.go UbahData.go Destroy.go SimulasiPinjaman.go Search.go Model.go

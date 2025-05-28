@@ -9,7 +9,7 @@ func main() {
 
 	var menu int
   for {
-        fmt.Println("\n+-------------------------------+")
+        fmt.Println("\n\n+-------------------------------+")
         fmt.Println("|             MENU              |")
         fmt.Println("+-------------------------------+")
         fmt.Println("| 1. Tambah Peminjam            |")

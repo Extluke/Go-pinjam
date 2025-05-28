@@ -26,7 +26,7 @@ func SimulasiPinjaman(dataNasabah []Nasabah) {
 	fmt.Println("|       Pilih Jenis Bunga       |")
 	for {
 		fmt.Println("+-------------------------------+")
-		fmt.Println("| 1. Bunga Tetap               |")
+		fmt.Println("| 1. Bunga Tetap                |")
 		fmt.Println("| 2. Variabel	                |")
 		fmt.Println("+-------------------------------+")
 		fmt.Print("Pilihan: ")

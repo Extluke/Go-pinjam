@@ -45,13 +45,14 @@ for {
 	}
 
 	// Pilihan tenor
+	fmt.Println()
 	fmt.Println("+-------------------------------+")
-	fmt.Println("|          Pilih Tenor         |")
+	fmt.Println("|          Pilih Tenor          |")
 	fmt.Println("+-------------------------------+")
 	for {
-		fmt.Println("| 1. Tenor 3 Bulan             |")
-		fmt.Println("| 2. Tenor 6 Bulan             |")
-		fmt.Println("| 3. Tenor 1 Tahun             |")
+		fmt.Println("| 1. Tenor 3 Bulan              |")
+		fmt.Println("| 2. Tenor 6 Bulan              |")
+		fmt.Println("| 3. Tenor 1 Tahun              |")
 		fmt.Println("+-------------------------------+")
 		fmt.Print("Pilihan: ")
 		_, err := fmt.Scanln(&tenor)

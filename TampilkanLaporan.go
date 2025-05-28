@@ -7,4 +7,5 @@ func TampilkanLaporan(dataNasabah []Nasabah) {
 	fmt.Println("|         Laporan Pinjaman      |")
 	fmt.Println("+-------------------------------+")
 	fmt.Println("misalkan aku bikin perubahan ini")
+	fmt.Println("ini aku bikin perubahan di file ini")
 }

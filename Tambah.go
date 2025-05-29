@@ -9,7 +9,6 @@ func Tambah(dataNasabah []Nasabah) Nasabah {
 	var jumlah float64
 	var tenor int
 	
-<<<<<<< HEAD
 for {
 	fmt.Print("Masukkan Nama : ")
 	fmt.Scanln(&nama)
@@ -18,17 +17,6 @@ for {
 		fmt.Println("Nama tidak boleh kosong.")
 		continue
 	}
-=======
-	for {
-		fmt.Println("╔═══════════════════════════════════════")
-		fmt.Print("║ Masukkan Nama (tanpa spasi)    : ")
-		fmt.Scanln(&nama)
-		
-		if nama == "" {
-			fmt.Println("⚠️  Nama tidak boleh kosong.")
-			continue
-		}
->>>>>>> 8effdf20a5437c5de2d16a1b0971e242d396901f
 
 		// Validasi duplikat
 		duplikat := false

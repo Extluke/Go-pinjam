@@ -59,7 +59,7 @@ func UrutkanPinjaman(dataNasabah []Nasabah) {
 	fmt.Println("║      📊 Pilih Metode Pengurutan       ║")
 	fmt.Println("╠═══════════════════════════════════════╣")
 	fmt.Println("║ 1. 🔢 Selection Sort                  ║")
-	fmt.Println("║ 2. ✏️ Insertion Sort                  ║")
+	fmt.Println("║ 2. ✏️ Insertion Sort                   ║")
 	fmt.Println("╚═══════════════════════════════════════╝")
 
 	var pilihan int

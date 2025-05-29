@@ -13,7 +13,7 @@ func main() {
 		fmt.Println("║              📋  MENU                ║")
 		fmt.Println("╠══════════════════════════════════════╣")
 		fmt.Println("║  1. ➕ Tambah Peminjam               ║")
-		fmt.Println("║  2. ✏️ Ubah Data Peminjam            ║")
+		fmt.Println("║  2. ✏️ Ubah Data Peminjam             ║")
 		fmt.Println("║  3. ❌ Hapus Data Peminjam           ║")
 		fmt.Println("║  4. 💰 Simulasi Pinjaman             ║")
 		fmt.Println("║  5. 📝 Input Status Pembayaran       ║")

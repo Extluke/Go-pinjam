@@ -78,7 +78,6 @@ func main() {
           fmt.Println("\nMenu Simulasi Pinjaman Selesai")
 				}
         
-
         if menu == 6 {
           fmt.Println("+-------------------------------+")
 	        fmt.Println("|         Cari Pinjaman         |")
@@ -89,6 +88,23 @@ func main() {
 
           fmt.Println("\nMenu Cari Pinjaman Selesai")
 				}
+
+        if menu == 8 {
+          fmt.Println("+-------------------------------+")
+          fmt.Println("|       Tampilkan Laporan       |")
+          fmt.Println("+-------------------------------+")
+          TampilkanLaporan(dataNasabah)
+          fmt.Println("\nMenu Tampilkan Laporan Selesai")
+        }
+
+        if menu == 7 {
+          fmt.Println("+-------------------------------+")
+          fmt.Println("|     Urutkan Data Pinjaman     |")
+          fmt.Println("+-------------------------------+")
+          fmt.Scanln()
+          UrutkanPinjaman(dataNasabah)
+          fmt.Println("\nMenu Urutkan Data Pinjaman Selesai")
+        }
 
         if menu == 9 {
           break

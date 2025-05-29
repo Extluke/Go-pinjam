@@ -1,8 +1,7 @@
 package main
 
 type Nasabah struct {
-	Nama string
+	Nama           string
 	JumlahPinjaman float64
-	Tenor int
+	Tenor          int
 }
-

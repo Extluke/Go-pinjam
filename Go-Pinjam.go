@@ -16,7 +16,7 @@ func main() {
 		fmt.Println("║  2. ✏️ Ubah Data Peminjam             ║")
 		fmt.Println("║  3. ❌ Hapus Data Peminjam           ║")
 		fmt.Println("║  4. 💰 Simulasi Pinjaman             ║")
-		fmt.Println("║  5. 📝 Input Status Pembayaran       ║")
+		fmt.Println("║  5. 💵 Input Status Pembayaran       ║")
 		fmt.Println("║  6. 🔍 Cari Peminjam                 ║")
 		fmt.Println("║  7. 📊 Urutkan Data Peminjam         ║")
 		fmt.Println("║  8. 📑 Tampilkan Laporan             ║")
@@ -47,7 +47,7 @@ func main() {
 
 		if menu == 2 {
 			fmt.Println("╔══════════════════════════════════════╗")
-			fmt.Println("║      ✏️  Menu Ubah Data Nasabah      ║")
+			fmt.Println("║      📝  Menu Ubah Data Nasabah      ║")
 			fmt.Println("╚══════════════════════════════════════╝")
 
 			fmt.Scanln()
@@ -74,6 +74,17 @@ func main() {
 
 			fmt.Scanln()
 			SimulasiPinjaman(dataNasabah)
+
+			fmt.Println("✅ Menu Simulasi Pinjaman Selesai")
+		}
+
+		if menu == 5 {
+			fmt.Println("╔══════════════════════════════════════╗")
+			fmt.Println("║      💵 Menu Status Pembayaran       ║")
+			fmt.Println("╚══════════════════════════════════════╝")
+
+			fmt.Scanln()
+			StatusPembayaran(dataNasabah)
 
 			fmt.Println("✅ Menu Simulasi Pinjaman Selesai")
 		}

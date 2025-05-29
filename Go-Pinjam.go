@@ -6,8 +6,35 @@ import "fmt"
 var dataNasabah []Nasabah
 
 func main() {
-
+	var DataDummy string
 	var menu int
+
+	for {
+		fmt.Print("Apakah Anda Ingin Menggunakan Data Dummy? [y/n] : ")
+		fmt.Scan(&DataDummy)
+		if DataDummy == "y" {
+			dataNasabah = []Nasabah{
+				{"Andi Setiawan", 15000000, 12, 6},
+				{"Budi Hartono", 20000000, 12, 12},
+				{"Citra Ayu", 10000000, 6, 6},
+				{"Dewi Lestari", 25000000, 12, 3},
+				{"Eka Pratama", 30000000, 3, 1},
+				{"Fajar Nugroho", 12000000, 12, 3},
+				{"Gina Marissa", 18000000, 12, 6},
+				{"Hadi Santoso", 22000000, 6, 4},
+				{"Ika Putri", 9000000, 6, 3},
+				{"Joko Susanto", 27000000, 12, 12},
+			}
+			break
+
+		} else if DataDummy == "n" {
+			break
+		} else {
+			fmt.Println("⚠️  Inputan Tidak Valid!")
+			continue
+		}
+	}
+	
 	for {
 		fmt.Println("\n╔══════════════════════════════════════╗")
 		fmt.Println("║              📋  MENU                ║")

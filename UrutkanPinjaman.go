@@ -5,26 +5,26 @@ import "fmt"
 func selectionSortASC(data []Nasabah) {
 	n := len(data)
 	for i := 0; i < n-1; i++ {
-		idxMin := i
+		indexTerkecil := i
 		for j := i + 1; j < n; j++ {
-			if data[j].JumlahPinjaman < data[idxMin].JumlahPinjaman {
-				idxMin = j
+			if data[j].JumlahPinjaman < data[indexTerkecil].JumlahPinjaman {
+				indexTerkecil = j
 			}
 		}
-		data[i], data[idxMin] = data[idxMin], data[i]
+		data[i], data[indexTerkecil] = data[indexTerkecil], data[i]
 	}
 }
 
 func selectionSortDESC(data []Nasabah) {
 	n := len(data)
 	for i := 0; i < n-1; i++ {
-		maxIndex := i
+		indexTerbesar := i
 		for j := i + 1; j < n; j++ {
-			if data[j].JumlahPinjaman > data[maxIndex].JumlahPinjaman {
-				maxIndex = j
+			if data[j].JumlahPinjaman > data[indexTerbesar].JumlahPinjaman {
+				indexTerbesar = j
 			}
 		}
-		data[i], data[maxIndex] = data[maxIndex], data[i]
+		data[i], data[indexTerbesar] = data[indexTerbesar], data[i]
 	}
 }
 
@@ -55,105 +55,105 @@ func insertionSortDESC(data []Nasabah) {
 }
 
 func UrutkanPinjaman(dataNasabah []Nasabah) {
-	fmt.Println("\n+-------------------------------+")
-	fmt.Println("|       Pilih Metode Urut       |")
-	fmt.Println("+-------------------------------+")
-	fmt.Println("| 1. Selection Sort             |")
-	fmt.Println("| 2. Insertion Sort             |")
-	fmt.Println("+-------------------------------+")
+	fmt.Println("\n╔═══════════════════════════════════════╗")
+	fmt.Println("║      📊 Pilih Metode Pengurutan       ║")
+	fmt.Println("╠═══════════════════════════════════════╣")
+	fmt.Println("║ 1. 🔢 Selection Sort                  ║")
+	fmt.Println("║ 2. ✏️ Insertion Sort                  ║")
+	fmt.Println("╚═══════════════════════════════════════╝")
 
 	var pilihan int
 
 	for {
-		fmt.Print("Pilihan: ")
+		fmt.Print("👉 Pilihan: ")
 		fmt.Scanln(&pilihan)
 		if pilihan >= 1 && pilihan <= 2 {
 			break
 		}
-		fmt.Println("\nInput tidak valid, silakan pilih ulang.")
+		fmt.Println("⚠️  Input tidak valid, silakan pilih ulang.")
 	}
 
 	if len(dataNasabah) == 0 {
-		fmt.Println("\n+-------------------------------+")
-		fmt.Println("|    Tidak ada data nasabah     |")
-		fmt.Println("+-------------------------------+")
+		fmt.Println("\n🚫 Tidak ada data nasabah.")
 		return
 	} else {
 		if pilihan == 1 {
-			fmt.Println("\n+-------------------------------+")
-			fmt.Println("|  Pilih Metode Selection Sort  |")
-			fmt.Println("+-------------------------------+")
-			fmt.Println("| 1. Ascending                  |")
-			fmt.Println("| 2. Descending                 |")
-			fmt.Println("+-------------------------------+")
+			fmt.Println("\n📥 Metode: Selection Sort")
+			fmt.Println("╔═══════════════════════════════════════╗")
+			fmt.Println("║ 1. 🔼 Ascending                       ║")
+			fmt.Println("║ 2. 🔽 Descending                      ║")
+			fmt.Println("╚═══════════════════════════════════════╝")
 
 			var urutan int
-			fmt.Print("Pilihan: ")
+			fmt.Print("👉 Pilihan: ")
 			fmt.Scanln(&urutan)
 
 			if urutan == 1 {
 				selectionSortASC(dataNasabah)
 
-				fmt.Println("\n+-------------------------------+")
-				fmt.Println("|     Data Setelah Diurutkan    |")
-				fmt.Println("+-------------------------------+")
-
+				fmt.Println("\n📋 Hasil Pengurutan (Ascending):")
+				fmt.Println("╔═══════════════════════════════════════╗")
 				for _, nasabah := range dataNasabah {
-					fmt.Printf("Nama: %s, Jumlah Pinjaman: %.2f, Tenor: %d\n", nasabah.Nama, nasabah.JumlahPinjaman, nasabah.Tenor)
+					fmt.Printf("║ 👤 Nama            : %s\n", nasabah.Nama)
+					fmt.Printf("║ 💸 Jumlah Pinjaman : Rp.%.2f\n", nasabah.JumlahPinjaman)
+					fmt.Printf("║ 🕒 Tenor           : %d Bulan\n", nasabah.Tenor)
+					fmt.Println("╠───────────────────────────────────────╣")
 				}
-
-				fmt.Println("\nData nasabah telah diurutkan menggunakan Selection Sort secara Ascending berdasarkan jumlah pinjaman.")
+				fmt.Println("╚═══════════════════════════════════════╝")
+				fmt.Println("\n✅ Data berhasil diurutkan secara Ascending dengan Selection Sort.")
 			} else if urutan == 2 {
 				selectionSortDESC(dataNasabah)
 
-				fmt.Println("\n+-------------------------------+")
-				fmt.Println("|     Data Setelah Diurutkan    |")
-				fmt.Println("+-------------------------------+")
-
+				fmt.Println("\n📋 Hasil Pengurutan (Descending):")
+				fmt.Println("╔═══════════════════════════════════════╗")
 				for _, nasabah := range dataNasabah {
-					fmt.Printf("Nama: %s, Jumlah Pinjaman: %.2f, Tenor: %d\n", nasabah.Nama, nasabah.JumlahPinjaman, nasabah.Tenor)
+					fmt.Printf("║ 👤 Nama            : %s\n", nasabah.Nama)
+					fmt.Printf("║ 💸 Jumlah Pinjaman : Rp.%.2f\n", nasabah.JumlahPinjaman)
+					fmt.Printf("║ 🕒 Tenor           : %d Bulan\n", nasabah.Tenor)
+					fmt.Println("╠───────────────────────────────────────╣")
 				}
-
-				fmt.Println("\nData nasabah telah diurutkan menggunakan Selection Sort secara Descending berdasarkan jumlah pinjaman.")
+				fmt.Println("╚═══════════════════════════════════════╝")
+				fmt.Println("\n✅ Data berhasil diurutkan secara Descending dengan Selection Sort.")
 			} else {
-				fmt.Println("Pilihan tidak valid.")
+				fmt.Println("⚠️  Pilihan tidak valid.")
 			}
 		} else if pilihan == 2 {
-			fmt.Println("\n+-------------------------------+")
-			fmt.Println("|  Pilih Metode Insertion Sort  |")
-			fmt.Println("+-------------------------------+")
-			fmt.Println("| 1. Ascending                  |")
-			fmt.Println("| 2. Descending                 |")
-			fmt.Println("+-------------------------------+")
+			fmt.Println("\n📥 Metode: Insertion Sort")
+			fmt.Println("╔═══════════════════════════════════════╗")
+			fmt.Println("║ 1. 🔼 Ascending                       ║")
+			fmt.Println("║ 2. 🔽 Descending                      ║")
+			fmt.Println("╚═══════════════════════════════════════╝")
 
 			var urutan int
-			fmt.Print("Pilihan: ")
+			fmt.Print("👉 Pilihan: ")
 			fmt.Scanln(&urutan)
 
 			if urutan == 1 {
 				insertionSortASC(dataNasabah)
 
-				fmt.Println("\n+-------------------------------+")
-				fmt.Println("|     Data Setelah Diurutkan    |")
-				fmt.Println("+-------------------------------+")
-
+				fmt.Println("\n📋 Hasil Pengurutan (Ascending):")
+				fmt.Println("╔═══════════════════════════════════════╗")
 				for _, nasabah := range dataNasabah {
-					fmt.Printf("Nama: %s, Jumlah Pinjaman: %.2f, Tenor: %d\n", nasabah.Nama, nasabah.JumlahPinjaman, nasabah.Tenor)
+					fmt.Printf("║ 👤 Nama            : %s\n", nasabah.Nama)
+					fmt.Printf("║ 💸 Jumlah Pinjaman : Rp.%.2f\n", nasabah.JumlahPinjaman)
+					fmt.Printf("║ 🕒 Tenor           : %d Bulan\n", nasabah.Tenor)
+					fmt.Println("╠───────────────────────────────────────╣")
 				}
-
-				fmt.Println("\nData nasabah telah diurutkan menggunakan Insertion Sort secara Ascending berdasarkan jumlah pinjaman.")
+				fmt.Println("╚═══════════════════════════════════════╝")
+				fmt.Println("\n✅ Data berhasil diurutkan secara Ascending dengan Insertion Sort.")
 			} else if urutan == 2 {
 				insertionSortDESC(dataNasabah)
 
-				fmt.Println("\n+-------------------------------+")
-				fmt.Println("|     Data Setelah Diurutkan    |")
-				fmt.Println("+-------------------------------+")
-
+				fmt.Println("\n📋 Hasil Pengurutan (Descending):")
+				fmt.Println("╔═══════════════════════════════════════╗")
 				for _, nasabah := range dataNasabah {
-					fmt.Printf("Nama: %s, Jumlah Pinjaman: %.2f, Tenor: %d\n", nasabah.Nama, nasabah.JumlahPinjaman, nasabah.Tenor)
+					fmt.Printf("║ 👤 Nama            : %s\n", nasabah.Nama)
+					fmt.Printf("║ 💸 Jumlah Pinjaman : Rp.%.2f\n", nasabah.JumlahPinjaman)
+					fmt.Printf("║ 🕒 Tenor           : %d Bulan\n", nasabah.Tenor)
+					fmt.Println("╠───────────────────────────────────────╣")
 				}
-
-				fmt.Println("\nData nasabah telah diurutkan menggunakan Insertion Sort secara Descending berdasarkan jumlah pinjaman.")
+				fmt.Println("╚═══════════════════════════════════════╝")
+				fmt.Println("\n✅ Data berhasil diurutkan secara Descending dengan Insertion Sort.")
 			}
 		}
 	}

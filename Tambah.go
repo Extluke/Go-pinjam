@@ -9,20 +9,21 @@ func Tambah(dataNasabah []Nasabah) Nasabah {
 	var jumlah float64
 	var tenor int
 	
-for {
-	fmt.Print("Masukkan Nama (tanpa spasi): ")
-	fmt.Scanln(&nama)
-	
-	if nama == "" {
-		fmt.Println("Nama tidak boleh kosong.")
-		continue
-	}
+	for {
+		fmt.Println("╔═══════════════════════════════════════")
+		fmt.Print("║ Masukkan Nama (tanpa spasi)    : ")
+		fmt.Scanln(&nama)
+		
+		if nama == "" {
+			fmt.Println("⚠️  Nama tidak boleh kosong.")
+			continue
+		}
 
-	// Validasi duplikat
-	duplikat := false
-	for _, n := range dataNasabah {
+		// Validasi duplikat
+		duplikat := false
+		for _, n := range dataNasabah {
 			if n.Nama == nama {
-				fmt.Println("Maaf, nama sudah digunakan. Mohon masukkan nama yang lain.")
+				fmt.Println("⚠️  Maaf, nama sudah digunakan. Mohon masukkan nama yang lain.")
 				duplikat = true
 				break
 			}
@@ -32,13 +33,14 @@ for {
 		}
 	}
 
-
 	// Input jumlah pinjaman
 	for {
-		fmt.Print("Masukkan Nominal Yang Diajukan: ")
+		fmt.Print("║ Masukkan Nominal Yang Diajukan : ")
 		_, err := fmt.Scanln(&jumlah)
+		fmt.Println("╚═══════════════════════════════════════")
+		
 		if err != nil {
-			fmt.Println("Input tidak valid. Masukkan angka.")
+			fmt.Println("⚠️  Input tidak valid. Masukkan angka.")
 			continue
 		}
 		break
@@ -46,18 +48,18 @@ for {
 
 	// Pilihan tenor
 	fmt.Println()
-	fmt.Println("+-------------------------------+")
-	fmt.Println("|          Pilih Tenor          |")
-	fmt.Println("+-------------------------------+")
+	fmt.Println("╔══════════════════════════════════════╗")
+	fmt.Println("║            🕒 PILIH TENOR            ║")
+	fmt.Println("╠══════════════════════════════════════╣")
+	fmt.Println("║ 1. Tenor 3 Bulan                     ║")
+	fmt.Println("║ 2. Tenor 6 Bulan                     ║")
+	fmt.Println("║ 3. Tenor 1 Tahun                     ║")
+	fmt.Println("╚══════════════════════════════════════╝")
 	for {
-		fmt.Println("| 1. Tenor 3 Bulan              |")
-		fmt.Println("| 2. Tenor 6 Bulan              |")
-		fmt.Println("| 3. Tenor 1 Tahun              |")
-		fmt.Println("+-------------------------------+")
-		fmt.Print("Pilihan: ")
+		fmt.Print("👉 Pilihan: ")
 		_, err := fmt.Scanln(&tenor)
 		if err != nil || tenor < 1 || tenor > 3 {
-			fmt.Println("Pilihan tenor tidak valid, silakan pilih ulang.")
+			fmt.Println("⚠️  Pilihan tenor tidak valid, silakan pilih ulang.")
 			continue
 		}
 		break
@@ -74,10 +76,12 @@ for {
 		tenorBulan = 12
 	}
 
-	fmt.Println("\n✅ Berhasil :")
-	fmt.Printf("Nama            : %s\n", nama)
-	fmt.Printf("Jumlah Pinjaman : %.0f\n", jumlah)
-	fmt.Printf("Tenor           : %d bulan\n", tenorBulan)
+	fmt.Println("\n🎉 ✅ Berhasil Ditambahkan:")
+	fmt.Println("╔══════════════════════════════════════╗")
+	fmt.Printf("║ Nama            : %s\n", nama)
+	fmt.Printf("║ Jumlah Pinjaman : Rp.%.0f\n", jumlah)
+	fmt.Printf("║ Tenor           : %d bulan\n", tenorBulan)
+	fmt.Println("╚══════════════════════════════════════╝")
 
 	return Nasabah{
 		Nama:           nama,

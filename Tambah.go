@@ -10,7 +10,7 @@ func Tambah(dataNasabah []Nasabah) Nasabah {
 	var tenor int
 	
 for {
-	fmt.Print("Masukkan Nama (tanpa spasi): ")
+	fmt.Print("Masukkan Nama : ")
 	fmt.Scanln(&nama)
 	
 	if nama == "" {

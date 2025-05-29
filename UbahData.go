@@ -15,6 +15,7 @@ func UbahData(dataNasabah []Nasabah) {
 		if hasil == -1 {
 			continue
 		} else {
+			fmt.Println("✅Nama Ditemukan")
 			nasabahBaru := Tambah(dataNasabah)
 
 			dataNasabah[hasil].Nama = nasabahBaru.Nama

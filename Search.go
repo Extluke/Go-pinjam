@@ -2,7 +2,6 @@ package main
 
 import "fmt"
 
-// untuk func sequential search
 func sequentialSearch(data []Nasabah, target string) int {
 	for i, nasabah := range data {
 		if nasabah.Nama == target {

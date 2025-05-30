@@ -7,7 +7,7 @@ import (
 func Tambah(dataNasabah []Nasabah) Nasabah {
 	var nama string
 	var jumlah float64
-	var tenor int
+	var tenor, StatusPembayaran int
 	
 for {
 	fmt.Println("╔═══════════════════════════════════════")
@@ -74,6 +74,10 @@ for {
 		tenorBulan = 6
 	case 3:
 		tenorBulan = 12
+	}
+
+	if StatusPembayaran > 0 {
+		
 	}
 
 	fmt.Println("\n🎉 ✅ Berhasil Ditambahkan:")

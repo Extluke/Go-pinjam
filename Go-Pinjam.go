@@ -6,8 +6,35 @@ import "fmt"
 var dataNasabah []Nasabah
 
 func main() {
-
+	var DataDummy string
 	var menu int
+
+	for {
+		fmt.Print("Apakah Anda Ingin Menggunakan Data Dummy? [y/n] : ")
+		fmt.Scan(&DataDummy)
+		if DataDummy == "y" {
+			dataNasabah = []Nasabah{
+				{"Andi Setiawan", 15000000, 12, 6},
+				{"Budi Hartono", 20000000, 12, 12},
+				{"Citra Ayu", 10000000, 6, 6},
+				{"Dewi Lestari", 25000000, 12, 3},
+				{"Eka Pratama", 30000000, 3, 1},
+				{"Fajar Nugroho", 12000000, 12, 3},
+				{"Gina Marissa", 18000000, 12, 6},
+				{"Hadi Santoso", 22000000, 6, 4},
+				{"Ika Putri", 9000000, 6, 3},
+				{"Joko Susanto", 27000000, 12, 12},
+			}
+			break
+
+		} else if DataDummy == "n" {
+			break
+		} else {
+			fmt.Println("⚠️  Inputan Tidak Valid!")
+			continue
+		}
+	}
+	
 	for {
 		fmt.Println("\n╔══════════════════════════════════════╗")
 		fmt.Println("║              📋  MENU                ║")
@@ -16,7 +43,7 @@ func main() {
 		fmt.Println("║  2. ✏️ Ubah Data Peminjam            ║")
 		fmt.Println("║  3. ❌ Hapus Data Peminjam           ║")
 		fmt.Println("║  4. 💰 Simulasi Pinjaman             ║")
-		fmt.Println("║  5. 📝 Input Status Pembayaran       ║")
+		fmt.Println("║  5. 💵 Input Status Pembayaran       ║")
 		fmt.Println("║  6. 🔍 Cari Peminjam                 ║")
 		fmt.Println("║  7. 📊 Urutkan Data Peminjam         ║")
 		fmt.Println("║  8. 📑 Tampilkan Laporan             ║")
@@ -47,7 +74,7 @@ func main() {
 
 		if menu == 2 {
 			fmt.Println("╔══════════════════════════════════════╗")
-			fmt.Println("║      ✏️  Menu Ubah Data Nasabah      ║")
+			fmt.Println("║      📝  Menu Ubah Data Nasabah      ║")
 			fmt.Println("╚══════════════════════════════════════╝")
 
 			fmt.Scanln()
@@ -74,6 +101,17 @@ func main() {
 
 			fmt.Scanln()
 			SimulasiPinjaman(dataNasabah)
+
+			fmt.Println("✅ Menu Simulasi Pinjaman Selesai")
+		}
+
+		if menu == 5 {
+			fmt.Println("╔══════════════════════════════════════╗")
+			fmt.Println("║      💵 Menu Status Pembayaran       ║")
+			fmt.Println("╚══════════════════════════════════════╝")
+
+			fmt.Scanln()
+			StatusPembayaran(dataNasabah)
 
 			fmt.Println("✅ Menu Simulasi Pinjaman Selesai")
 		}

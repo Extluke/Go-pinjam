@@ -9,7 +9,7 @@ func UbahData(dataNasabah []Nasabah) {
 
 	for {
 		fmt.Println("\n╔══════════════════════════════════════╗")
-		fmt.Println("║     ✏️ Nasabah Yang Ingin Diubah     ║")
+		fmt.Println("║     ✏️ Nasabah Yang Ingin Diubah      ║")
 		fmt.Println("╚══════════════════════════════════════╝")
 		fmt.Print("👉 Nama: ")
 		fmt.Scanln(&target)
@@ -25,6 +25,11 @@ func UbahData(dataNasabah []Nasabah) {
 			dataNasabah[hasil].Nama = nasabahBaru.Nama
 			dataNasabah[hasil].JumlahPinjaman = nasabahBaru.JumlahPinjaman
 			dataNasabah[hasil].Tenor = nasabahBaru.Tenor
+
+			if dataNasabah[hasil].StatusPembayaran > 0 {
+				bulan := TambahkanStatusPembayaran(dataNasabah, hasil)
+				dataNasabah[hasil].StatusPembayaran = bulan
+			}
 
 			fmt.Println("\n✅ Data Nasabah Sukses Diperbarui!")
 			break

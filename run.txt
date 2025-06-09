@@ -1,1 +1,1 @@
-go run Go-Pinjam.go Tambah.go UbahData.go Destroy.go SimulasiPinjaman.go Search.go Model.go TampilkanLaporan.go UrutkanPinjaman.go
+go run 1-Tambah.go 2-UbahData.go 3-Destroy.go 4-SimulasiPinjaman.go 5-StatusPembayaran.go 6-Search.go 7-UrutkanPinjamanPerNominal.go 8-UrutkanPinjamanPerTenor.go Model.go 9-TampilkanLaporan.go Go-Pinjam.go

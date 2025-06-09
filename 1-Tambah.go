@@ -11,7 +11,7 @@ func Tambah(dataNasabah []Nasabah) Nasabah {
 	
 for {
 	fmt.Println("╔═══════════════════════════════════════")
-	fmt.Print("║ Masukkan Nama : ")
+	fmt.Print("║ Masukkan Nama             : ")
 	fmt.Scanln(&nama)
 	
 	if nama == "" {
@@ -35,7 +35,7 @@ for {
 
 	// Input jumlah pinjaman
 	for {
-		fmt.Print("║ Masukkan Nominal Yang Diajukan : ")
+		fmt.Print("║ Masukkan Nominal Diajukan : ")
 		_, err := fmt.Scanln(&jumlah)
 		fmt.Println("╚═══════════════════════════════════════")
 		

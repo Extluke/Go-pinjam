@@ -9,7 +9,7 @@ func UbahData(dataNasabah []Nasabah) {
 
 	for {
 		fmt.Println("\n╔══════════════════════════════════════╗")
-		fmt.Println("║     ✏️ Nasabah Yang Ingin Diubah      ║")
+		fmt.Println("║     ✏️ Nasabah Yang Ingin Diubah     ║")
 		fmt.Println("╚══════════════════════════════════════╝")
 		fmt.Print("👉 Nama: ")
 		fmt.Scanln(&target)

@@ -57,10 +57,10 @@ func Tetap(hasil Nasabah) {
 
 	fmt.Println("\n📈 Simulasi Cicilan dengan Bunga Tetap")
 	fmt.Println("╔══════════════════════════════════════")
-	fmt.Printf("║ Bunga/Bulan   = %.2f × 1%% = %.2f\n", hasil.JumlahPinjaman, bungaPerBulan)
-	fmt.Printf("║ Bunga Total   = %.2f × %d Bulan = %.2f\n", bungaPerBulan, hasil.Tenor, bungaTotal)
-	fmt.Printf("║ Total Bayar   = %.2f + %.2f = %.2f\n", hasil.JumlahPinjaman, bungaTotal, totalBayar)
-	fmt.Printf("║ Cicilan/Bulan = %.2f / %d = %.2f\n", totalBayar, hasil.Tenor, cicilan)
+	fmt.Printf("║ Bunga/Bulan   : %.2f × 1%%         : %.2f\n", hasil.JumlahPinjaman, bungaPerBulan)
+	fmt.Printf("║ Bunga Total   : %.2f   × %d Bulan     : %.2f\n", bungaPerBulan, hasil.Tenor, bungaTotal)
+	fmt.Printf("║ Total Bayar   : %.2f + %.2f : %.2f\n", hasil.JumlahPinjaman, bungaTotal, totalBayar)
+	fmt.Printf("║ Cicilan/Bulan : %.2f / %d Bulan   : %.2f\n", totalBayar, hasil.Tenor, cicilan)
 	fmt.Println("╚══════════════════════════════════════")
 }
 

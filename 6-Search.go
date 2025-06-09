@@ -32,5 +32,6 @@ func CariPeminjam(dataNasabah []Nasabah) {
 	fmt.Printf("║ 👤 Nama             : %s\n", nasabah.Nama)
 	fmt.Printf("║ 💸 Jumlah Pinjaman  : Rp.%.2f\n", nasabah.JumlahPinjaman)
 	fmt.Printf("║ 🕒 Tenor            : %d bulan\n", nasabah.Tenor)
+	
 	fmt.Println("╚══════════════════════════════════════╝")
 }

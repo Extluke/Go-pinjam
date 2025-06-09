@@ -8,7 +8,7 @@ func StatusPembayaran (data []Nasabah) {
 
 	for {
 		fmt.Println("╔═══════════════════════════════════════")
-		fmt.Print("║ 👤 Nama Nasabah Yang Akan Diinput Status Pembayarannya  : ")
+		fmt.Print("║ 👤 Nama Nasabah Untuk Input Status Pembayaran : ")
 		fmt.Scan(&target)
 		fmt.Println("╚═══════════════════════════════════════")
 
@@ -20,7 +20,7 @@ func StatusPembayaran (data []Nasabah) {
 		break
 	}
 
-	fmt.Printf("\n🎉 ✅Data Nasabah Behasil ditemukan\n")
+	fmt.Printf("\n✅ Data Nasabah Behasil ditemukan\n")
 
 	bulan := TambahkanStatusPembayaran(dataNasabah, hasil)
 
@@ -33,7 +33,7 @@ func StatusPembayaran (data []Nasabah) {
 func TampilkanStatusPembayaran(dataNasabah []Nasabah, hasil int) {
 	SisaCicilan := dataNasabah[hasil].Tenor - dataNasabah[hasil].StatusPembayaran
 
-	fmt.Println("╔══════════════════════════════════════════╗")
+	fmt.Println("╔══════════════════════════════════════╗")
 	fmt.Printf("║ 👤 Nama              : %s\n", dataNasabah[hasil].Nama)
 	fmt.Printf("║ 💰 Jumlah Pinjaman   : Rp.%.2f\n", dataNasabah[hasil].JumlahPinjaman)
 	fmt.Printf("║ 🕒 Tenor             : %d Bulan\n", dataNasabah[hasil].Tenor)
@@ -42,14 +42,14 @@ func TampilkanStatusPembayaran(dataNasabah []Nasabah, hasil int) {
 		} else if dataNasabah[hasil].StatusPembayaran == dataNasabah[hasil].Tenor {
 			fmt.Printf("║ 💵 Status Pembayaran : Lunas\n")
 		}
-	fmt.Println("╚══════════════════════════════════════════╝")
+	fmt.Println("╚═══════════════════════════════════════")
 }
 
 func TambahkanStatusPembayaran(dataNasabah []Nasabah, hasil int) int {
 	var bulan int
 	for {
 		fmt.Println("╔═══════════════════════════════════════")
-		fmt.Print("║ 💲Masukkan Cicilan Yang sudah Dibayar : ")
+		fmt.Print("║ 💲 Masukkan Cicilan Yang sudah Dibayar : ")
 		fmt.Scan(&bulan)
 		fmt.Println("╚═══════════════════════════════════════")
 		
